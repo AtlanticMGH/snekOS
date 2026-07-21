@@ -1,5 +1,5 @@
 BITS 16
-ORG 0x8400
+ORG 0x8000
 
 main:
     mov ah, 0x00
@@ -29,6 +29,6 @@ wait_key:
 .warte:
     loop .warte
 
-    jmp 0x8000
+    jmp 0x8400
 
 snake db "Snake"

@@ -8,27 +8,27 @@ start:
     mov ss, ax
     mov sp, 0x7c00
 
-    ; program.bin laden → nach 0x8000 (Sektor 3)
+    ; menu.bin laden → nach 0x8000 (Sektor 2)
     mov ah, 0x02
-    mov al, 4                   ; 4 Sektoren für program
+    mov al, 1           ; 1 Sektor für program
     mov ch, 0
-    mov cl, 3                   ; Sektor 3
+    mov cl, 2           ; Sektor 2
     mov dh, 0
     mov bx, 0x8000
     int 0x13
     jc disk_error
 
-    ; menu.bin laden → nach 0x8400 (Sektor 2)
+                                ; program.bin laden → nach 0x8400 (Sektor 3)
     mov ah, 0x02
-    mov al, 1           ; 4 Sektoren für program
+    mov al, 8                   ; 8 Sektoren für program
     mov ch, 0
-    mov cl, 2           ; Sektor 2
+    mov cl, 3                   ; Sektor 3
     mov dh, 0
     mov bx, 0x8400
     int 0x13
     jc disk_error
 
-    jmp 0x8400                  ; Springe zur zieladresse
+    jmp 0x8000                  ; Springe zur zieladresse
 
 disk_error:
     mov si, err_msg

@@ -1,4 +1,4 @@
-# snekOS — QEMU Guide
+# snekOS, QEMU Guide
 
 A tiny 16-bit real-mode Snake game that boots directly as an OS, built from a
 custom boot sector, a menu, and the game itself.
@@ -39,7 +39,7 @@ make run
 
 
 This assembles `boot.asm`, `menu.asm`, and `program.asm`, combines them into
-`disk.img`, and boots it in QEMU (via its built-in SeaBIOS — legacy BIOS
+`disk.img`, and boots it in QEMU (via its built-in SeaBIOS, legacy BIOS
 boot, no UEFI/CSM needed).
 
 To only build the image without running it:
@@ -56,8 +56,8 @@ qemu-system-x86_64 -drive format=raw,file=disk.img
 
 ## Controls
 
-- **Enter** — start the game from the menu
-- **Arrow keys** — move the snake
+- **Enter**, start the game from the menu
+- **Arrow keys**, move the snake
 
 ## Clean up
 

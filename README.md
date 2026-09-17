@@ -68,5 +68,5 @@ make clean
 ## Note
 
 This only runs in **legacy BIOS mode**. It cannot boot on real UEFI-only
-hardware without CSM — QEMU works because it emulates its own BIOS
+hardware without CSM, QEMU works because it emulates its own BIOS
 regardless of the host machine's firmware.

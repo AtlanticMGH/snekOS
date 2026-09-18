@@ -1,4 +1,4 @@
-# snekOS, QEMU Guide
+# snekOS
 
 A tiny 16-bit real-mode Snake game that boots directly as an OS, built from a
 custom boot sector, a menu, and the game itself.
